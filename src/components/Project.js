@@ -1,4 +1,3 @@
-import React from "react";
 import ProjectCard from "./ProjectCard";
 
 const Project = () => {
@@ -8,9 +7,16 @@ const Project = () => {
         <section className="project">
           <h1>Some Project</h1>
           <div className="project-card">
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
+            {project.map((item) => {
+              return (
+                <ProjectCard
+                  key={item.id}
+                  title={item.title}
+                  image={item.image}
+                  link={item.link}
+                />
+              );
+            })}
           </div>
           <div className="button">
             <button className="btn">Load More</button>
@@ -20,5 +26,26 @@ const Project = () => {
     </div>
   );
 };
+
+const project = [
+  {
+    id: 2,
+    title: "Jonathan Specter(Landing Page)",
+    image: "./images/JonathanSpecter.png",
+    link: "https://johnathan-specter-porfolio.netlify.app",
+  },
+  {
+    id: 1,
+    title: "Simple Weather App",
+    image: "./images/WeatherApp.png",
+    link: "https://iambinod27.github.io/simple-weather-app-react/",
+  },
+  {
+    id: 3,
+    title: "Blog App",
+    image: "./images/BlogApp.png",
+    link: "https://unifeed-grid.netlify.app/",
+  },
+];
 
 export default Project;

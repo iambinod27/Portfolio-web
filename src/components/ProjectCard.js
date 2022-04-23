@@ -1,13 +1,13 @@
-import BlogApp from "../assets/JonathanSpecter.png";
-
-const ProjectCard = ({ title, image }) => {
+const ProjectCard = ({ title, image, link }) => {
   return (
     <div className="card">
       <div className="card-img">
-        <img src={BlogApp} alt="" />
+        <a href={link} target="_blank" rel="noreferrer">
+          <img src={image} alt={title} />
+        </a>
       </div>
       <div className="card-title">
-        <h3>Simple Weather App</h3>
+        <h3>{title}</h3>
       </div>
     </div>
   );
