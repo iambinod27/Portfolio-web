@@ -1,15 +1,27 @@
 import Coding from "../assets/undraw_programming_re_kg9v.svg";
 import { SiJavascript, SiRedux } from "react-icons/si";
 import { FaReact, FaGitAlt, FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <section className="about">
       <div className="container">
         <h1>About Me</h1>
-        <div className="aboutSection">
+        <motion.div
+          className="aboutSection"
+          whileInView={{ x: 0 }}
+          initial={{ x: 100 }}
+          viewport={{ once: true }}
+        >
           <div className="left-img">
-            <img src={Coding} alt="Coder" />
+            <motion.img
+              whileInView={{ scale: 1 }}
+              initial={{ scale: 0.5 }}
+              viewport={{ once: true }}
+              src={Coding}
+              alt="Coder"
+            />
           </div>
           <div className="right-content">
             <div className="upperText">
@@ -35,7 +47,7 @@ const About = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

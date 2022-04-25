@@ -123,9 +123,6 @@ nav {
 
 // About
 .about {
-    background: #191829;
-    padding: 1rem 0;
-
     .container {
         padding: 0 3rem;
         min-height: 100vh;
@@ -137,7 +134,6 @@ nav {
         
             h1 {
                 text-align: center;
-                padding: 2rem 0;
             }
             
             .aboutSection {
@@ -180,6 +176,7 @@ nav {
 // Project 
 
 .wrapper-project {
+    background: #191829;
     .container {
         .project {
             min-height: 100vh;
@@ -211,7 +208,7 @@ nav {
 
 // Project card 
 .card {
-        background-color: #191829;
+        background-color: #242333;
         border-radius: 8px;
     
     .card-img {

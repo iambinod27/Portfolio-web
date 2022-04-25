@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaFacebook, FaTwitter } from "react-icons/fa";
+import Button from "./Button";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -64,9 +65,7 @@ const Contact = () => {
               </div>
 
               <div className="right-button">
-                <button className="btn" type="submit">
-                  Send
-                </button>
+                <Button text="Send" />
               </div>
             </form>
           </div>

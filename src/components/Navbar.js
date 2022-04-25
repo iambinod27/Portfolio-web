@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
@@ -10,9 +11,9 @@ const Navbar = () => {
           </div>
           <div className="right-nav">
             <ul>
-              <li>Project</li>
-              <li>About</li>
-              <li>Contact</li>
+              {["Project", "About", "Contact"].map((list) => {
+                return <motion.li whileTap={{ scale: 0.91 }}>{list}</motion.li>;
+              })}
             </ul>
 
             <div className="social-links">

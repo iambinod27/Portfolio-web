@@ -1,4 +1,5 @@
 import ProjectCard from "./ProjectCard";
+import Button from "./Button";
 
 const Project = () => {
   return (
@@ -19,7 +20,7 @@ const Project = () => {
             })}
           </div>
           <div className="button">
-            <button className="btn">Load More</button>
+            <Button text="Load More" />
           </div>
         </section>
       </div>

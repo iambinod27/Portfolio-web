@@ -1,6 +1,14 @@
+import { motion } from "framer-motion";
+
 const ProjectCard = ({ title, image, link }) => {
   return (
-    <div className="card">
+    <motion.div
+      whileInView={{ scale: 1 }}
+      initial={{ scale: 0.5 }}
+      viewport={{ once: true }}
+      whileHover={{ scale: 1.04 }}
+      className="card"
+    >
       <div className="card-img">
         <a href={link} target="_blank" rel="noreferrer">
           <img src={image} alt={title} />
@@ -9,7 +17,7 @@ const ProjectCard = ({ title, image, link }) => {
       <div className="card-title">
         <h3>{title}</h3>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

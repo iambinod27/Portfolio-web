@@ -12,9 +12,9 @@ const App = () => {
 
       <Landing />
 
-      <About />
-
       <Project />
+
+      <About />
 
       <Contact />
     </>
