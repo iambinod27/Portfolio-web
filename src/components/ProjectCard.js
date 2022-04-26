@@ -3,10 +3,13 @@ import { motion } from "framer-motion";
 const ProjectCard = ({ title, image, link }) => {
   return (
     <motion.div
-      whileInView={{ scale: 1 }}
-      initial={{ scale: 0.5 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      initial={{ scale: 0.5, opacity: 0.4 }}
       viewport={{ once: true }}
-      whileHover={{ scale: 1.04 }}
+      whileHover={{ scale: 1.07 }}
+      transition={{
+        duration: 0.6,
+      }}
       className="card"
     >
       <div className="card-img">

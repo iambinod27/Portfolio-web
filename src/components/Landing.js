@@ -7,10 +7,11 @@ const Landing = () => {
       <div className="container">
         <section className="home">
           <motion.div
-            animate={{ x: 0 }}
+            whileInView={{ x: 0 }}
             initial={{ x: -100 }}
             transition={{ type: "spring", stiffness: 100 }}
             className="textContent"
+            viewport={{ once: true }}
           >
             <h2>HELLO! I'm Binod. I am Frontend Developer.</h2>
             <p>I code beautifully simple things, and I love what I do.</p>
@@ -26,7 +27,8 @@ const Landing = () => {
           </motion.div>
           <div className="ImageContent">
             <motion.img
-              animate={{ scale: 1, opacity: 1 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
               initial={{ scale: 0.5, opacity: 0.4 }}
               transition={{ type: "spring", stiffness: 125 }}
               src={ImageContent}

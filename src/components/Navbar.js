@@ -11,8 +11,12 @@ const Navbar = () => {
           </div>
           <div className="right-nav">
             <ul>
-              {["Project", "About", "Contact"].map((list) => {
-                return <motion.li whileTap={{ scale: 0.91 }}>{list}</motion.li>;
+              {["Project", "About", "Contact"].map((list, index) => {
+                return (
+                  <motion.li whileTap={{ scale: 0.91 }} key={index}>
+                    {list}
+                  </motion.li>
+                );
               })}
             </ul>
 

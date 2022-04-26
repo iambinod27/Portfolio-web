@@ -1,12 +1,17 @@
 import { useState } from "react";
 import { FaFacebook, FaTwitter } from "react-icons/fa";
-import Button from "./Button";
+import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
+
+const { REACT_APP_SERVICE_ID, REACT_APP_API_KEY, REACT_APP_TEMPLATE_ID } =
+  process.env;
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    // message: "",
+    message: "",
   });
 
   const { name, email, message } = formData;
@@ -21,6 +26,30 @@ const Contact = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
+
+    if (name === "" && email === "") {
+      toast.error("Form is Missing Something.");
+    } else if (message.length < 25) {
+      toast.error("Message Character Should be more than 25.");
+    } else {
+      try {
+        emailjs.send(
+          REACT_APP_SERVICE_ID,
+          REACT_APP_TEMPLATE_ID,
+          formData,
+          REACT_APP_API_KEY
+        );
+        toast.success("Email Send Successfully.");
+      } catch (error) {
+        toast.error(`${error.text}`);
+      }
+
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    }
   };
 
   return (
@@ -29,10 +58,10 @@ const Contact = () => {
         <section className="contact">
           <div className="form-section">
             <h2>Contact with me</h2>
+
             <form onSubmit={onSubmit}>
               <div className="first">
                 <div className="formLabel">
-                  {/* <label>Name:</label> */}
                   <input
                     type="text"
                     placeholder="Name"
@@ -43,7 +72,6 @@ const Contact = () => {
                 </div>
 
                 <div className="formLabel">
-                  {/* <label>Email:</label> */}
                   <input
                     type="email"
                     placeholder="Email"
@@ -55,7 +83,6 @@ const Contact = () => {
               </div>
 
               <div className="Message">
-                {/* <label>Message</label> */}
                 <textarea
                   placeholder="Message"
                   value={message}
@@ -65,7 +92,14 @@ const Contact = () => {
               </div>
 
               <div className="right-button">
-                <Button text="Send" />
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="btn"
+                  type="submit"
+                >
+                  Send
+                </motion.button>
               </div>
             </form>
           </div>

@@ -41,12 +41,6 @@ const project = [
     image: "./images/WeatherApp.png",
     link: "https://iambinod27.github.io/simple-weather-app-react/",
   },
-  {
-    id: 3,
-    title: "Blog App",
-    image: "./images/BlogApp.png",
-    link: "https://unifeed-grid.netlify.app/",
-  },
 ];
 
 export default Project;
