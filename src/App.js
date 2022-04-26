@@ -6,6 +6,7 @@ import About from "./components/About";
 import Project from "./components/Project";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   return (
@@ -31,6 +32,8 @@ const App = () => {
         pauseOnHover
         theme="dark"
       />
+
+      <ScrollToTop />
     </>
   );
 };

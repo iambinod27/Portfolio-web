@@ -25,7 +25,6 @@ const Contact = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
 
     if (name === "" && email === "") {
       toast.error("Form is Missing Something.");
