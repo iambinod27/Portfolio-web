@@ -371,6 +371,11 @@ nav {
     }
 }
 
+.mobile {
+    display: none;
+}
+
+
 ::-webkit-scrollbar-track {
     border: 5px solid white;
     background-color: #b2bec3;
@@ -386,3 +391,23 @@ nav {
     border-radius: 10px;
 }
 
+@media(max-width:798px) {
+    .mobile {
+        display: block;
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+    }
+
+    .home, .about, .project, nav {
+        display: none;
+    }
+
+    .wrapper {
+        display: none;
+    }
+
+    
+}

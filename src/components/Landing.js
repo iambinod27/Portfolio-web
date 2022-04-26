@@ -1,10 +1,15 @@
 import ImageContent from "../assets/ImageContent.jpeg";
 import { motion } from "framer-motion";
+import { MdConstruction } from "react-icons/md";
 
 const Landing = () => {
   return (
     <>
       <div className="container">
+        <div className="mobile">
+          <MdConstruction className="icons" fill="#eed202 " />
+          Responsive Work In Progress
+        </div>
         <section className="home">
           <motion.div
             whileInView={{ x: 0 }}
