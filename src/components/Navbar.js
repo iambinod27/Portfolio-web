@@ -21,8 +21,20 @@ const Navbar = () => {
             </ul>
 
             <div className="social-links">
-              <FaGithub className="icons" />
-              <FaLinkedin className="icons" />
+              <a
+                href="https://github.com/iambinod27"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaGithub className="icons" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/binod-waiba-tamang-861b45230/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaLinkedin className="icons" />
+              </a>
             </div>
           </div>
         </div>

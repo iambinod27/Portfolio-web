@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaFacebook, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
@@ -119,8 +119,20 @@ const Contact = () => {
               </div>
               <div className="infos">
                 <h4>Social</h4>
-                <FaFacebook className="icons" />
-                <FaTwitter className="icons" />
+                <a
+                  href="https://www.facebook.com/iambinod27/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaFacebook className="icons" />
+                </a>
+                <a
+                  href="https://www.instagram.com/iambinod__/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaInstagram className="icons" />
+                </a>
               </div>
             </div>
           </div>

@@ -13,7 +13,7 @@ const Project = () => {
     <div className="wrapper-project">
       <div className="container">
         <section className="project" id="project">
-          <h1>Some Project</h1>
+          <h1>Some Projects</h1>
           <div className="project-card">
             {project.slice(0, visible).map((item) => {
               return (

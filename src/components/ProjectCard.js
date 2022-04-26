@@ -6,7 +6,7 @@ const ProjectCard = ({ title, image, link }) => {
       whileInView={{ scale: 1, opacity: 1 }}
       initial={{ scale: 0.5, opacity: 0.4 }}
       viewport={{ once: true }}
-      whileHover={{ scale: 1.07 }}
+      whileHover={{ scale: 1.04 }}
       transition={{
         duration: 0.6,
       }}
