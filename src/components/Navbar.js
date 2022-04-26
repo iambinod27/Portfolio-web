@@ -11,10 +11,10 @@ const Navbar = () => {
           </div>
           <div className="right-nav">
             <ul>
-              {["Project", "About", "Contact"].map((list, index) => {
+              {links.map((list) => {
                 return (
-                  <motion.li whileTap={{ scale: 0.91 }} key={index}>
-                    {list}
+                  <motion.li whileTap={{ scale: 0.91 }} key={list.id}>
+                    <a href={list.linked}>{list.linkName}</a>
                   </motion.li>
                 );
               })}
@@ -30,5 +30,19 @@ const Navbar = () => {
     </>
   );
 };
+
+const links = [
+  { id: 1, linkName: "Project", linked: "#project" },
+  {
+    id: 2,
+    linkName: "About",
+    linked: "#about",
+  },
+  {
+    id: 3,
+    linkName: "Contact",
+    linked: "#contact",
+  },
+];
 
 export default Navbar;

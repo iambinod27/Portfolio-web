@@ -1,14 +1,21 @@
 import ProjectCard from "./ProjectCard";
-import Button from "./Button";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import project from "../utils/projectStore";
 
 const Project = () => {
+  const [visible, setVisible] = useState(3);
+
+  const onLoadMore = () => {
+    setVisible((prevItem) => prevItem + 3);
+  };
   return (
     <div className="wrapper-project">
       <div className="container">
-        <section className="project">
+        <section className="project" id="project">
           <h1>Some Project</h1>
           <div className="project-card">
-            {project.map((item) => {
+            {project.slice(0, visible).map((item) => {
               return (
                 <ProjectCard
                   key={item.id}
@@ -20,27 +27,19 @@ const Project = () => {
             })}
           </div>
           <div className="button">
-            <Button text="Load More" />
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={onLoadMore}
+              className="btn"
+            >
+              Load More
+            </motion.button>
           </div>
         </section>
       </div>
     </div>
   );
 };
-
-const project = [
-  {
-    id: 2,
-    title: "Jonathan Specter(Landing Page)",
-    image: "./images/JonathanSpecter.png",
-    link: "https://johnathan-specter-porfolio.netlify.app",
-  },
-  {
-    id: 1,
-    title: "Simple Weather App",
-    image: "./images/WeatherApp.png",
-    link: "https://iambinod27.github.io/simple-weather-app-react/",
-  },
-];
 
 export default Project;
