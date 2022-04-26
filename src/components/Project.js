@@ -7,7 +7,7 @@ const Project = () => {
   const [visible, setVisible] = useState(3);
 
   const onLoadMore = () => {
-    setVisible((prevItem) => prevItem + 3);
+    setVisible((prevItem) => prevItem + 2);
   };
   return (
     <div className="wrapper-project">
@@ -31,7 +31,7 @@ const Project = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={onLoadMore}
-              className="btn"
+              className={project.length === visible ? "hide" : "btn"}
             >
               Load More
             </motion.button>
