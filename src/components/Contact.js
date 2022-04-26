@@ -3,9 +3,7 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
-
-const { REACT_APP_SERVICE_ID, REACT_APP_API_KEY, REACT_APP_TEMPLATE_ID } =
-  process.env;
+import env from "react-dotenv";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -33,10 +31,10 @@ const Contact = () => {
     } else {
       try {
         emailjs.send(
-          REACT_APP_SERVICE_ID,
-          REACT_APP_TEMPLATE_ID,
+          env.SERVICE_ID_NETLIFY,
+          env.TEMPLATE_ID_NETLIFY,
           formData,
-          REACT_APP_API_KEY
+          env.API_KEY_NETLIFY
         );
         toast.success("Email Send Successfully.");
       } catch (error) {
