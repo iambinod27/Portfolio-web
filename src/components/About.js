@@ -31,7 +31,7 @@ const About = () => {
               alt="Coder"
             />
           </div>
-          <div className="right-content">
+          <article className="right-content">
             <div className="upperText">
               <p>
                 Currently a student pursuing Bachelors in Computer Application.
@@ -60,7 +60,7 @@ const About = () => {
                 <SiWebpack className="icons" title="Webpack5" />
               </div>
             </div>
-          </div>
+          </article>
         </motion.div>
       </div>
     </section>

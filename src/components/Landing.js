@@ -5,11 +5,12 @@ import { MdConstruction } from "react-icons/md";
 const Landing = () => {
   return (
     <>
-      <div className="container">
+      <main className="container">
         <div className="mobile">
           <MdConstruction className="icons" fill="#eed202 " />
           Responsive Work In Progress
         </div>
+
         <section className="home">
           <motion.div
             whileInView={{ x: 0 }}
@@ -41,7 +42,7 @@ const Landing = () => {
             />
           </div>
         </section>
-      </div>
+      </main>
     </>
   );
 };

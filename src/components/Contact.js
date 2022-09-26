@@ -54,7 +54,7 @@ const Contact = () => {
       <div className="container">
         <section className="contact" id="contact">
           <div className="form-section">
-            <h2>Contact with me</h2>
+            <h2>Contact</h2>
 
             <form onSubmit={onSubmit}>
               <div className="first">
