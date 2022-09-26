@@ -18,7 +18,7 @@ const Landing = () => {
             className="textContent"
             viewport={{ once: true }}
           >
-            <h2>HELLO! I'm Binod. I am Frontend Developer.</h2>
+            <h2>Hey There!!! I'm Binod Frontend Developer.</h2>
             <p>I code beautifully simple things, and I love what I do.</p>
             <motion.button
               whileHover={{ scale: 1.1 }}
@@ -26,7 +26,7 @@ const Landing = () => {
               className="btn"
             >
               <a href="./CV.pdf" className="download" download>
-                Download Resume
+                Resume
               </a>
             </motion.button>
           </motion.div>
