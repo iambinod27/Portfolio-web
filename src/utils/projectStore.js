@@ -1,5 +1,11 @@
 const project = [
   {
+    id: 5,
+    title: "Manage Landing page",
+    image: "./images/Manner.png",
+    link: "https://landing-page27.netlify.app/",
+  },
+  {
     id: 4,
     title: "Yelp Camp (Authentication/Firebase)",
     image: "./images/YelpCamp.png",
