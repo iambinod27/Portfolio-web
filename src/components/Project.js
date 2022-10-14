@@ -7,7 +7,7 @@ const Project = () => {
   const [visible, setVisible] = useState(3);
 
   const onLoadMore = () => {
-    setVisible((prevItem) => prevItem + 2);
+    setVisible((prevItem) => prevItem + 3);
   };
   return (
     <div className="wrapper-project">
