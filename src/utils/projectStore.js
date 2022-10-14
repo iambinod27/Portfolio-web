@@ -1,5 +1,11 @@
 const project = [
   {
+    id: 6,
+    title: "Bookstore",
+    image: "./images/bookstore.png",
+    link: "https://kitab-pustakalaya.netlify.app/",
+  },
+  {
     id: 5,
     title: "Manage Landing page",
     image: "./images/Manner.png",
