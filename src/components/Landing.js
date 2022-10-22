@@ -26,7 +26,7 @@ const Landing = () => {
               whileTap={{ scale: 0.9 }}
               className="btn"
             >
-              <a href="./CV.pdf" className="download" download>
+              <a href="./New CV.pdf" className="download" download>
                 Resume
               </a>
             </motion.button>
