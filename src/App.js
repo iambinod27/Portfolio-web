@@ -7,33 +7,41 @@ import Project from "./components/Project";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ScrollToTop from "./components/ScrollToTop";
+import Maintenance from "./page/Maintenance";
 
 const App = () => {
+  const show = true;
   return (
     <>
-      <Navbar />
+      {show ? (
+        <Maintenance />
+      ) : (
+        <>
+          <Navbar />
 
-      <Landing />
+          <Landing />
 
-      <Project />
+          <Project />
 
-      <About />
+          <About />
 
-      <Contact />
+          <Contact />
 
-      <ToastContainer
-        position="bottom-center"
-        autoClose={2000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        pauseOnHover
-        theme="dark"
-      />
+          <ToastContainer
+            position="bottom-center"
+            autoClose={2000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            pauseOnHover
+            theme="dark"
+          />
 
-      <ScrollToTop />
+          <ScrollToTop />
+        </>
+      )}
     </>
   );
 };
