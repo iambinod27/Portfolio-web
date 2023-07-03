@@ -10,7 +10,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Maintenance from "./page/Maintenance";
 
 const App = () => {
-  const show = true;
+  const show = false;
   return (
     <>
       {show ? (
